@@ -51,7 +51,8 @@ function Categories() {
     <section className="categories">
 
       <h1>
-        Explore Gaming Categories
+         TRENDING GAMING PRODUCTS 
+        
       </h1>
 
       <p className="categories-text">

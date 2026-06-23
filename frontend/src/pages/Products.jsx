@@ -1,18 +1,36 @@
+import "./Products.css";
+import products from "../data";
+
 function Products() {
-
   return (
-    <div
-      style={{
-        padding: "150px 40px",
-        background: "#111",
-        color: "white",
-        minHeight: "100vh"
-      }}
-    >
+    <div className="products-page">
 
-      <h1>
-        All Gaming Products
+      <h1 className="products-title">
+        Gaming Products
       </h1>
+
+      <div className="products-grid">
+
+        {products.map((product) => (
+          <div className="product-card" key={product.id}>
+
+            <img
+              src={product.image}
+              alt={product.name}
+            />
+
+            <h3>{product.name}</h3>
+
+            <p>{product.price}</p>
+
+            <button>
+              Add To Cart
+            </button>
+
+          </div>
+        ))}
+
+      </div>
 
     </div>
   );

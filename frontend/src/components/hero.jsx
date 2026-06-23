@@ -1,10 +1,10 @@
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
-
   return (
     <section className="hero">
-
+      
       <div className="hero-overlay"></div>
 
       <div className="hero-content">
@@ -19,23 +19,21 @@ function Hero() {
         </h1>
 
         <p className="hero-description">
-
           Explore premium gaming keyboards,
           mice, headsets, monitors and
           esports accessories designed
           for serious gamers.
-
         </p>
 
         <div className="hero-buttons">
 
-          <button className="shop-btn">
+          <Link to="/products" className="shop-btn">
             Shop Now
-          </button>
+          </Link>
 
-          <button className="explore-btn">
+          <Link to="/products" className="explore-btn">
             Explore Products
-          </button>
+          </Link>
 
         </div>
 

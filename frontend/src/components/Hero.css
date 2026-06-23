@@ -1,162 +1,243 @@
 .hero {
-  position: relative;
 
   height: 100vh;
 
   background-image:
-    url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
+    linear-gradient(
+      rgba(0,0,0,0.72),
+      rgba(0,0,0,0.82)
+    ),
+
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920&auto=format&fit=crop");
 
   background-size: cover;
+
   background-position: center;
+
+  background-repeat: no-repeat;
 
   display: flex;
 
   align-items: center;
 
-  padding: 0 8%;
+  padding: 0 90px;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
-.hero-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to right,
-      rgba(0,0,0,0.88),
-      rgba(0,0,0,0.55)
-    );
-}
+/* HERO CONTENT */
 
 .hero-content {
-  position: relative;
+
+  max-width: 650px;
+
+  color: white;
 
   z-index: 2;
 
-  max-width: 720px;
-
-  color: white;
+  animation: fadeSlide 1.2s ease;
 }
 
+/* SMALL TEXT */
+
 .small-text {
-  color: #c1c1c1;
 
-  font-size: 14px;
+  font-size: 18px;
 
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 
-  margin-bottom: 20px;
+  color: #d1d1d1;
+
+  margin-bottom: 25px;
 
   text-transform: uppercase;
 }
 
-.hero-content h1 {
-  font-size: 78px;
+/* MAIN TITLE */
+
+.hero h1 {
+
+  font-size: 72px;
 
   line-height: 1.1;
 
-  margin-bottom: 25px;
-
   font-weight: 800;
 
-  color: white;
+  margin-bottom: 25px;
+
+  animation: floatText 4s ease-in-out infinite;
 }
 
-.hero-description {
-  font-size: 18px;
+/* DESCRIPTION */
 
-  line-height: 1.9;
+.hero-description {
+
+  font-size: 22px;
+
+  line-height: 1.7;
 
   color: #d1d1d1;
 
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
-  max-width: 650px;
+  max-width: 620px;
 }
 
+/* BUTTONS */
+
 .hero-buttons {
+
   display: flex;
 
   gap: 20px;
 }
 
-.shop-btn {
+.shop-btn,
+.explore-btn {
+
   padding: 16px 36px;
 
-  border: none;
+  border-radius: 14px;
 
-  border-radius: 8px;
+  font-size: 18px;
 
-  background-color: white;
-
-  color: black;
-
-  font-size: 16px;
-
-  font-weight: bold;
+  font-weight: 600;
 
   cursor: pointer;
 
-  transition: 0.3s;
+  transition: 0.4s ease;
+
+  border: none;
+}
+
+/* SHOP BUTTON */
+
+.shop-btn {
+
+  background: white;
+
+  color: black;
 }
 
 .shop-btn:hover {
-  background-color: #dcdcdc;
 
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.04);
+
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.35);
 }
 
-.explore-btn {
-  padding: 16px 36px;
+/* EXPLORE BUTTON */
 
-  border: 1px solid white;
+.explore-btn {
 
   background: transparent;
 
+  border: 2px solid rgba(255,255,255,0.3);
+
   color: white;
 
-  font-size: 16px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-
-  border-radius: 8px;
-
-  transition: 0.3s;
+  backdrop-filter: blur(10px);
 }
 
 .explore-btn:hover {
-  background-color: white;
 
-  color: black;
+  background: rgba(255,255,255,0.1);
 
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
-/* Responsive */
+/* PAGE LOAD ANIMATION */
 
-@media (max-width: 900px) {
+@keyframes fadeSlide {
 
-  .hero {
-    padding: 0 5%;
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(60px);
   }
 
-  .hero-content h1 {
-    font-size: 52px;
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+/* FLOATING TITLE EFFECT */
+
+@keyframes floatText {
+
+  0% {
+
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+
+    transform:
+      translateY(-6px);
+  }
+
+  100% {
+
+    transform:
+      translateY(0px);
+  }
+}
+
+/* SCROLL EFFECT */
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  bottom: -120px;
+
+  left: -10%;
+
+  width: 120%;
+
+  height: 220px;
+
+  background:
+    linear-gradient(
+      to top,
+      #000,
+      transparent
+    );
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    padding: 0 25px;
+  }
+
+  .hero h1 {
+
+    font-size: 48px;
   }
 
   .hero-description {
-    font-size: 16px;
+
+    font-size: 18px;
   }
 
   .hero-buttons {
-    flex-direction: column;
-  }
 
-  .shop-btn,
-  .explore-btn {
-    width: 100%;
+    flex-direction: column;
   }
 }

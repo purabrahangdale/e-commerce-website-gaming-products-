@@ -4,7 +4,7 @@ function About() {
     <div
       style={{
         padding: "150px 40px",
-        background: "#111",
+        background: "#2d1010",
         color: "white",
         minHeight: "100vh"
       }}
@@ -15,9 +15,31 @@ function About() {
       </h1>
 
       <p>
-        We provide premium gaming accessories
-        and esports setup products.
+         Welcome to Gaming Store — your ultimate
+    destination for premium gaming accessories
+    and esports gear.
       </p>
+
+      <p>
+    We provide high-quality gaming keyboards,
+    RGB mice, gaming headsets, monitors,
+    chairs and accessories designed for
+    passionate gamers and professional players.
+  </p>
+
+
+  <p>
+    Our mission is to deliver the best gaming
+    experience with modern technology,
+    stylish products and affordable prices.
+  </p>
+
+  <p>
+    Whether you're a casual gamer or an
+    esports enthusiast, Gaming Store helps
+    you build your dream gaming setup.
+  </p>
+
 
     </div>
   );
