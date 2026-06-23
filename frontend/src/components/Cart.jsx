@@ -51,7 +51,7 @@ function Cart({ cartItems, setCartOpen }) {
                   </h4>
 
                   <p>
-                    ₹ {item.price}
+                    Rs. {item.price}
                   </p>
 
                 </div>
@@ -65,7 +65,7 @@ function Cart({ cartItems, setCartOpen }) {
       </div>
 
       <h3 className="total">
-        Total: ₹ {totalPrice}
+        Total: Rs. {totalPrice}
       </h3>
 
     </div>

@@ -19,7 +19,7 @@ function ProductCard(props) {
       </p>
 
       <p className="price">
-        ₹ {props.price}
+        Rs. {props.price}
       </p>
 
       <button

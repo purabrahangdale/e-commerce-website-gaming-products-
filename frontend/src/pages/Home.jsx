@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-import "./Home.css";
+import "./home.css";
 
 import Hero from "../components/Hero";
 import Categories from "../components/Categories";

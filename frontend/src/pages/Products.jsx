@@ -1,4 +1,4 @@
-import "./Products.css";
+import "./products.css";
 import products from "../data";
 
 function Products() {
